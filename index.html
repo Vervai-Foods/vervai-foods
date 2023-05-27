@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/ad10a8323d.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script src="env.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init(YOUR_PUBLIC_KEY);
+      })();
+    </script>
+    <title>Vervai Foods</title>
+  </head>
+
+  <body>
+    <div class="navbar" id="navbar">
+      <div class="navbrand">
+        <a href="#home">
+          <img
+            src="./assets/logo-cropped-removebg-preview.png"
+            alt=""
+            class="navlogo"
+          />
+        </a>
+        <a
+          href="javascript:void(0);"
+          class="nav-ham-icon"
+          onclick="toggleNavbar()"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div>
+        <ul class="navlist" id="navlist">
+          <li class="navlistitem">
+            <a href="#home" class="navlink active">Home</a>
+          </li>
+          <li class="navlistitem">
+            <a href="#about" class="navlink">About Us</a>
+          </li>
+          <li class="navlistitem">
+            <a href="#products" class="navlink">Products</a>
+          </li>
+          <li class="navlistitem">
+            <a href="#testimonials" class="navlink">Testimonials</a>
+          </li>
+          <li class="navlistitem">
+            <a href="#contact" class="navlink">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="home-container" id="home">
+      <div class="carousel-container">
+        <div class="slide fade">
+          <img src="./assets/farm-market.jpg" class="carousel-image" />
+          <div class="carousel-text">
+            <p>
+              Upcycling Farm Produce <br />
+              for Better Value!!
+            </p>
+          </div>
+        </div>
+        <div class="slide fade">
+          <img src="./assets/tamil-farming.jpg" class="carousel-image" />
+          <div class="carousel-text">
+            Reducing Food Waste !! <br />
+            Improving Farmer Income !!
+          </div>
+        </div>
+        <div class="slide fade">
+          <img
+            src="./assets/food-waste.jpg"
+            class="carousel-image"
+            width="100%"
+            style="filter: brightness(50%)"
+          />
+          <div class="carousel-text">
+            " <span class="highlight-text">40%</span> of all grown food is never
+            eaten.
+            <br />
+            <span class="highlight-text">FOOD</span> is lost or wasted at every
+            step
+            <br />
+            of its journey from Farm to Plate."
+            <br />
+            - WWF Report
+          </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </div>
+    <div class="about-container" id="about">
+      <div class="section-heading">
+        <h1>About us</h1>
+      </div>
+      <div class="about-what-content">
+        <div class="what-heading">What's the IDEA ??</div>
+        <div class="what-content-row">
+          <div class="what-content-left">
+            <div class="what-passage">
+              Using Science & Tech to upcycle rejected Vegetables & Fruits into
+              edible value added products. Thereby improving farmer income &
+              also retaining nutrition by creating healthier food alternatives.
+            </div>
+            <div>
+              <div class="what-subtitle-container">
+                <img src="./assets/checked.png" alt="" class="highlight-icon" />
+                <p class="what-subtitle">Solar Dried - Malt- Mix-Jam -Pickle</p>
+              </div>
+              Make products from solar drying or tradtionally processing
+              Vegetables or Fruits- eg. Brinjals, Ladiesfingers, Amla, Carrots,
+              Beetroot etc
+            </div>
+            <div>
+              <div class="what-subtitle-container">
+                <img src="./assets/checked.png" alt="" class="highlight-icon" />
+                <p class="what-subtitle">
+                  Fair Price, More Value-Reduced Waste
+                </p>
+              </div>
+              Farmers earn additional income when source discarded food is
+              procured for value addition & sold to right customer. Converting
+              Waste to wealth for our Health.
+            </div>
+          </div>
+          <div class="what-content-right">
+            <img src="./assets/upscale.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="about-why-content">
+        <div class="about-why-left">
+          <p>Why does food goes unused?</p>
+          <img src="./assets/food-waste-2.jpg" alt="" />
+          <!-- <img src="./assets/40-progress.jpg" alt="" /> -->
+        </div>
+        <div class="about-why-right">
+          <ul>
+            <li class="about-why-right-item">
+              <img src="./assets/carrots.png" alt="" class="li-icon" />
+              <div>
+                <span class="why-item-title">Size, Shape & Colour</span>
+                <br />
+                <span class="why-item-text">
+                  Too small or big. Irregular shape & sub standard colour or
+                  Looks!
+                </span>
+              </div>
+            </li>
+            <li class="about-why-right-item">
+              <img src="./assets/apples.png" alt="" class="li-icon" />
+              <div>
+                <span class="why-item-title">Cut or Damaged</span>
+                <br />
+                <span class="why-item-text">
+                  During Harvest, Supply Chain & Transport
+                </span>
+              </div>
+            </li>
+            <li class="about-why-right-item">
+              <img src="./assets/oyster.png" alt="" class="li-icon" />
+              <div>
+                <span class="why-item-title">Mature or Over ripen</span>
+                <br />
+                <span class="why-item-text">
+                  Perishable, Not edible or Low Preference
+                </span>
+              </div>
+            </li>
+            <li class="about-why-right-item">
+              <img src="./assets/cabbage.png" alt="" class="li-icon" />
+              <div>
+                <span class="why-item-title">Surplus & Lack of Storage</span>
+                <br />
+                <span class="why-item-text">
+                  Over production for the season or No Buyers
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="products-container" id="products">
+      <div class="section-heading">
+        <h1>Our Products</h1>
+      </div>
+      <div class="products-qualities">
+        <ul>
+          <li class="quality-item">
+            <div class="quality-icon">
+              <!-- <img src="./assets/green-tick.jpg" alt="" /> -->
+              <i class="fa-solid fa-ban fa-3x"></i>
+            </div>
+            <div>
+              <b>No added preservatives</b>
+              <br />
+              Only natural ingredients
+            </div>
+          </li>
+          <li class="quality-item">
+            <div class="quality-icon">
+              <!-- <img src="./assets/green-tick.jpg" alt="" /> -->
+              <i class="fa-solid fa-carrot fa-3x"></i>
+            </div>
+            <div>
+              <b>Rich in Nutrients</b>
+              <br />
+              High quality & Traditional methods
+            </div>
+          </li>
+          <li class="quality-item">
+            <div class="quality-icon">
+              <!-- <img src="./assets/green-tick.jpg" alt="" /> -->
+              <i class="fa-sharp fa-solid fa-recycle fa-3x"></i>
+            </div>
+            <div>
+              <b>Reduced Food Miles</b><br />
+              Minimal Carbon Footprint
+            </div>
+          </li>
+          <li class="quality-item">
+            <div class="quality-icon">
+              <!-- <img src="./assets/green-tick.jpg" alt="" /> -->
+              <i class="fa-solid fa-person-dress fa-3x"></i>
+            </div>
+            <div>
+              <b>Empower Women</b>
+              <br />
+              Sustained & Fair income
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="products-content">
+        <div class="products-row">
+          <div class="product-card">
+            <img
+              src="./assets/carrot-powder.jpeg"
+              alt=""
+              class="product-image"
+            />
+            <div class="product-card-body">
+              <span class="product-title">Carrot Malt</span>
+              <!-- <br />
+              <span class="product-desc">
+                Brinjals, Ladiesfinger, Cluster Beans, Green Chilli dried & made
+                into Vathal
+              </span> -->
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="./assets/vathal.jpeg" alt="" class="product-image" />
+            <div class="product-card-body">
+              <span class="product-title">Ladiesfinger Vathal</span>
+              <!-- <br />
+              <span class="product-desc">
+                Carrots & Beetroots into Malt/ Health Drink Powder.
+              </span> -->
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="./assets/beet-powder.jpeg" alt="" class="product-image" />
+            <div class="product-card-body">
+              <span class="product-title">Beetroot Malt</span>
+              <!-- <br />
+              <span class="product-desc">
+                Strawberry, Guava & Mango made into Jams
+              </span> -->
+            </div>
+          </div>
+        </div>
+        <div class="products-row">
+          <div class="product-card">
+            <img
+              src="./assets/chilli-powder.jpeg"
+              alt=""
+              class="product-image"
+            />
+            <div class="product-card-body">
+              <span class="product-title">Chilly Powder</span>
+              <!-- <br />
+              <span class="product-desc">
+                Mango or Lemon or Amla or Citron into Pickles
+              </span> -->
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img
+              src="./assets/banana-powder.jpeg"
+              alt=""
+              class="product-image"
+            />
+            <div class="product-card-body">
+              <span class="product-title">Banana Powder</span>
+              <!-- <br />
+              <span class="product-desc">
+                Bittergourd, Banana, Potato, Yam into Chips
+              </span> -->
+            </div>
+          </div>
+          <!-- <div class="product-card">
+            <img
+              src="./assets/product-chips.jpg"
+              alt=""
+              class="product-image"
+            />
+            <div class="product-card-body">
+              <span class="product-title">Powders</span>
+              <br />
+              <span class="product-desc">Turmeric, Greens into powder </span>
+            </div>
+          </div> -->
+        </div>
+        <div class="product-caption">
+          We will keep ideating & will introduce more products!
+        </div>
+      </div>
+    </div>
+    <div class="testimonials-container" id="testimonials">
+      <div class="section-heading">
+        <h1>Testimonials</h1>
+      </div>
+      <div class="t-carousel-container">
+        <div class="top-border">
+          <hr />
+        </div>
+        <div class="t-slide fade">
+          <div class="t-carousel-text">
+            <span class="t-name">Nivetha</span> <br />
+            <!-- <span class="t-organization">Happy organization</span> -->
+            <p class="t-content-text">
+              "My doctor suggested me to intake iron rich foods..I now start my
+              day with Beetroot malt. Its tasty and also very healthy. Love it
+              !!"
+            </p>
+          </div>
+        </div>
+        <div class="t-slide fade">
+          <div class="t-carousel-text">
+            <span class="t-name">Tamilarasan</span> <br />
+            <!-- <span class="t-organization">Happy organization</span> -->
+            <p class="t-content-text">
+              "Everytime I harvest ladiesfinger, a lot of it will be rejected
+              due to muthal. My green chillies give more yield but unable to
+              sell all of them. Now making vathal and chilli powder is helping
+              me earn extra money."
+            </p>
+          </div>
+        </div>
+        <div class="t-slide fade">
+          <div class="t-carousel-text">
+            <span class="t-name">Ramya</span> <br />
+            <!-- <span class="t-organization">Happy organization</span> -->
+            <p class="t-content-text">
+              "My daughter loves ladiesfinger vathal. She hates the vegetable as
+              it is slimy. But with curd rice, she enjoys the crispy
+              ladiesfingers. Same with Bananas, she likes banana powder a lot."
+            </p>
+          </div>
+        </div>
+        <a class="t-prev" onclick="plusTestiSlides(-1)">&#10094;</a>
+        <a class="t-next" onclick="plusTestiSlides(1)">&#10095;</a>
+        <div class="bottom-border">
+          <hr />
+        </div>
+      </div>
+      <div class="t-dot-container">
+        <span class="t-dot" onclick="currentTestiSlide(1)"></span>
+        <span class="t-dot" onclick="currentTestiSlide(2)"></span>
+        <span class="t-dot" onclick="currentTestiSlide(3)"></span>
+      </div>
+      <div class="team-container">
+        <div class="team-heading">OUR TEAM</div>
+        <div class="team-cards-row">
+          <div class="team-card">
+            <img src="./assets/karthika.jpeg" alt="" class="team-card-img" />
+            <span class="team-card-name">Karthika</span>
+            <br />
+            <span class="team-card-pos">CEO</span>
+            <br />
+            <span class="team-card-desc">
+              Experience in Farming, Warehouse Operations & Farmer Community
+              Building
+            </span>
+          </div>
+          <div class="team-card">
+            <img src="./assets/thamizh.jpg" alt="" class="team-card-img" />
+            <span class="team-card-name">Thamizh</span>
+            <br />
+            <span class="team-card-pos">Marketing & Sales</span>
+            <br />
+            <span class="team-card-desc">
+              Onboarding new customers, handling finance & Coordinating Delivery
+            </span>
+          </div>
+          <div class="team-card">
+            <img src="./assets/farmers.jpg" alt="" class="team-card-img" />
+            <span class="team-card-name">Farmer Community</span>
+            <span class="team-card-desc">
+              Both Men and Women In Tiruvallur District & Nilgiris
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-container" id="contact">
+      <div class="section-heading">
+        <h1>Contact us</h1>
+      </div>
+      <div class="contact-content-container">
+        <div class="contact-content">
+          <div class="contact-content-left">
+            <img src="./assets/dont-waste.png" alt="" class="contact-image" />
+          </div>
+          <div class="contact-content-right">
+            <div>
+              <form class="contact-form" id="contactForm">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Your Name"
+                  class="form-input"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Your Email"
+                  class="form-input"
+                  required
+                />
+                <textarea
+                  name="message"
+                  id="message"
+                  cols="30"
+                  rows="10"
+                  placeholder="Your thoughts"
+                  class="form-textarea"
+                  required
+                ></textarea>
+                <input
+                  type="submit"
+                  value="Submit"
+                  class="form-submit"
+                  id="submitBtn"
+                />
+                <div class="contact-response-container">
+                  <p id="responseSuccessMessage"></p>
+                  <p id="responseErrorMessage"></p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-content">
+        <div class="footer-left">
+          <div class="footer-logo">
+            <img src="./assets/logo-cropped-removebg-preview.png" alt="" />
+            <div class="footer-text">
+              Let's Reduce Food Waste, <br />
+              Create more jobs & <br />
+              Make farming viable!
+            </div>
+          </div>
+          <div class="footer-address">
+            <span class="footer-subtitle">Address</span>
+            <hr />
+            <!-- <i class="fa-regular fa-location-dot"></i> -->
+            <b>Vervai Food Products Private limited, </b><br />
+            No. 21, Subashree Nagar extension 3, <br />
+            Mugalivakkam, <br />
+            Chennai - 600125
+          </div>
+        </div>
+        <div class="footer-right">
+          <span class="footer-subtitle">Contact Us</span>
+          <div>
+            <hr />
+          </div>
+          <div class="social-outer-container">
+            <div class="social-container">
+              <div>
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>+91 93441 80748</span>
+              </div>
+              <div>
+                <i class="fa-brands fa-instagram"></i>
+                <span>vervai.foods</span>
+              </div>
+            </div>
+            <div class="social-container">
+              <div>
+                <i class="fa-regular fa-envelope"></i>
+                <span>vervaifoods@gmail.com</span>
+              </div>
+              <div>
+                <i class="fa-brands fa-linkedin-in"></i>
+                <span>vervai.foods</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        Copyright © 2023 Vervai Food Products Pvt Ltd
+      </div>
+    </div>
+    <script src="emailScript.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
